@@ -1,28 +1,33 @@
-# Generative-Deep-Learning
 CIFAR-10 Image Classification with Neural Network
+This repository contains a Python implementation of a neural network for image classification using the CIFAR-10 dataset. The CIFAR-10 dataset is a collection of 60,000 32x32 color images in 10 different classes, with 6,000 images per class.
 
-This project demonstrates the implementation of a neural network for image classification using the CIFAR-10 dataset. The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 different classes, with 6,000 images per class.
+Overview
+The project is structured into sections covering data preparation, model building, training, evaluation, and visualization of predictions on random test images.
 
 Requirements
+Make sure you have the following installed:
+
 Python 3.x
 TensorFlow 2.x
 NumPy
 Matplotlib
-Setup
-Install the required libraries:
+You can install the required dependencies using the following command:
 
 bash
 Copy code
 pip install numpy matplotlib tensorflow
+Setup
 Clone the repository:
 
 bash
 Copy code
 git clone https://github.com/yourusername/your-repo.git
 cd your-repo
+Open the project in your preferred Python environment.
+
 Usage
 1. Prepare Data
-Load and preprocess the CIFAR-10 dataset:
+In this section, we load and preprocess the CIFAR-10 dataset.
 
 python
 Copy code
@@ -44,7 +49,7 @@ x_test = x_test.astype("float32") / 255.0
 y_train = utils.to_categorical(y_train, NUM_CLASSES)
 y_test = utils.to_categorical(y_test, NUM_CLASSES)
 2. Build Model
-Define and build the neural network model:
+Define and build the neural network model.
 
 python
 Copy code
@@ -60,7 +65,7 @@ model = models.Model(input_layer, output_layer)
 
 model.summary()
 3. Train Model
-Compile and train the model on the training data:
+Compile and train the model on the training data.
 
 python
 Copy code
@@ -71,13 +76,13 @@ model.compile(
 
 model.fit(x_train, y_train, batch_size=32, epochs=10, shuffle=True)
 4. Evaluate Model
-Evaluate the model on the test data:
+Evaluate the model on the test data.
 
 python
 Copy code
 model.evaluate(x_test, y_test)
 5. Prediction and Visualization
-Make predictions on random test images and visualize the results:
+Make predictions on random test images and visualize the results.
 
 python
 Copy code
