@@ -1,130 +1,41 @@
-# CIFAR-10 Image Classification with Neural Network
+# Generative Deep Learning Projects
 
-This repository contains a Python implementation of a neural network for image classification using the CIFAR-10 dataset. The CIFAR-10 dataset is a collection of 60,000 32x32 color images in 10 different classes, with 6,000 images per class.
+This repository contains a collection of projects based on the book "Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play, 1st Edition." The projects cover various aspects of generative deep learning, including image generation, text generation, and music composition.
 
-# Overview
-The project is structured into sections covering data preparation, model building, training, evaluation, and visualization of predictions on random test images.
+Table of Contents
+Introduction
+Projects
+[1. Project Title 1](https://github.com/sik247/Generative-Deep-Learning/tree/main/Chapter_2_Deeplearning)
 
-# Requirements
-Make sure you have the following installed:
 
-Python 3.x
-TensorFlow 2.x
-NumPy
-Matplotlib
-You can install the required dependencies using the following command:
+# Introduction
+Generative Deep Learning has emerged as a fascinating field, enabling machines to create new content in various domains. This repository is a collection of projects inspired by the concepts and techniques presented in the book "Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play, 1st Edition."
 
-bash
-Copy code
-pip install numpy matplotlib tensorflow
-Setup
-Clone the repository:
+# Project 1 - CIFAR 
 
-bash
-Copy code
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
-Open the project in your preferred Python environment.
+# CIFAR-10 Image Classification
+This project focuses on implementing a neural network for image classification using the CIFAR-10 dataset. The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 different classes, making it a suitable benchmark for testing image classification models.
 
-Usage
-1. Prepare Data
-In this section, we load and preprocess the CIFAR-10 dataset.
+Project Highlights:
+Data Preparation:
 
-python
-Copy code
-import numpy as np
-import matplotlib.pyplot as plt
-from tensorflow.keras import layers, models, optimizers, utils, datasets
+The CIFAR-10 dataset is loaded and preprocessed.
+Images are normalized to the range [0, 1], and labels are one-hot encoded.
+Model Architecture:
 
-# Number of classes in CIFAR-10
-NUM_CLASSES = 10
+A simple neural network is defined using the Keras API.
+The model includes flatten and dense layers with ReLU activation functions.
+The output layer uses softmax activation for multiclass classification.
+Training the Model:
 
-# Load CIFAR-10 dataset
-(x_train, y_train), (x_test, y_test) = datasets.cifar10.load_data()
+The model is compiled using the Adam optimizer and categorical cross-entropy loss.
+Training is performed on the training set with a batch size of 32 for 10 epochs.
+Model Evaluation:
 
-# Normalize pixel values to the range [0, 1]
-x_train = x_train.astype("float32") / 255.0
-x_test = x_test.astype("float32") / 255.0
+The trained model is evaluated on the test set to assess its performance.
+Prediction and Visualization:
 
-# One-hot encode the labels
-y_train = utils.to_categorical(y_train, NUM_CLASSES)
-y_test = utils.to_categorical(y_test, NUM_CLASSES)
-2. Build Model
-Define and build the neural network model.
+Random test images are selected to make predictions.
+The actual and predicted classes are displayed along with the corresponding images.
 
-python
-Copy code
-input_layer = layers.Input((32, 32, 3))
-
-x = layers.Flatten()(input_layer)
-x = layers.Dense(200, activation="relu")(x)
-x = layers.Dense(150, activation="relu")(x)
-
-output_layer = layers.Dense(NUM_CLASSES, activation="softmax")(x)
-
-model = models.Model(input_layer, output_layer)
-
-model.summary()
-3. Train Model
-Compile and train the model on the training data.
-
-python
-Copy code
-opt = optimizers.Adam(learning_rate=0.0005)
-model.compile(
-    loss="categorical_crossentropy", optimizer=opt, metrics=["accuracy"]
-)
-
-model.fit(x_train, y_train, batch_size=32, epochs=10, shuffle=True)
-4. Evaluate Model
-Evaluate the model on the test data.
-
-python
-Copy code
-model.evaluate(x_test, y_test)
-5. Prediction and Visualization
-Make predictions on random test images and visualize the results.
-
-python
-Copy code
-# Define class labels
-CLASSES = np.array([
-    "airplane", "automobile", "bird", "cat", "deer",
-    "dog", "frog", "horse", "ship", "truck"
-])
-
-# Make predictions on test data
-preds = model.predict(x_test)
-preds_single = CLASSES[np.argmax(preds, axis=-1)]
-actual_single = CLASSES[np.argmax(y_test, axis=-1)]
-
-# Visualize random test images and predictions
-n_to_show = 10
-indices = np.random.choice(range(len(x_test)), n_to_show)
-
-fig = plt.figure(figsize=(15, 3))
-fig.subplots_adjust(hspace=0.4, wspace=0.4)
-
-for i, idx in enumerate(indices):
-    img = x_test[idx]
-    ax = fig.add_subplot(1, n_to_show, i + 1)
-    ax.axis("off")
-    ax.text(
-        0.5,
-        -0.35,
-        "pred = " + str(preds_single[idx]),
-        fontsize=10,
-        ha="center",
-        transform=ax.transAxes,
-    )
-    ax.text(
-        0.5,
-        -0.7,
-        "act = " + str(actual_single[idx]),
-        fontsize=10,
-        ha="center",
-        transform=ax.transAxes,
-    )
-    ax.imshow(img)
-
-plt.show()
+Usage instruction provided in readme of code*
