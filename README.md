@@ -1,11 +1,11 @@
-#CIFAR-10 Image Classification with Neural Network
+# CIFAR-10 Image Classification with Neural Network
 
 This repository contains a Python implementation of a neural network for image classification using the CIFAR-10 dataset. The CIFAR-10 dataset is a collection of 60,000 32x32 color images in 10 different classes, with 6,000 images per class.
 
-#Overview
+# Overview
 The project is structured into sections covering data preparation, model building, training, evaluation, and visualization of predictions on random test images.
 
-#Requirements
+# Requirements
 Make sure you have the following installed:
 
 Python 3.x
