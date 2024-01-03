@@ -1,41 +1,127 @@
-# Generative Deep Learning Projects
+# Generative AI with TensorFlow and Keras
 
-This repository contains a collection of projects based on the book "Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play, 1st Edition." The projects cover various aspects of generative deep learning, including image generation, text generation, and music composition.
+## Overview
 
-Table of Contents
-Introduction
-Projects
-[1. Project Title 1](https://github.com/sik247/Generative-Deep-Learning/tree/main/Chapter_2_Deeplearning)
+Welcome to the Generative AI project repository! This repository accompanies the practical book that teaches machine learning engineers and data scientists how to use TensorFlow and Keras to create impressive generative deep learning models. From variational autoencoders (VAEs) to generative adversarial networks (GANs), Transformers, normalizing flows, energy-based models, and denoising diffusion models, this project covers a wide range of generative AI techniques.
 
+## Table of Contents
 
-# Introduction
-Generative Deep Learning has emerged as a fascinating field, enabling machines to create new content in various domains. This repository is a collection of projects inspired by the concepts and techniques presented in the book "Generative Deep Learning: Teaching Machines to Paint, Write, Compose, and Play, 1st Edition."
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Models](#models)
+  - [Model Reviews](#model-reviews)
+    - [Convolutional Neural Networks (CNN)](#convolutional-neural-networks-cnn)
+    - [Recurrent Neural Networks (RNN)](#recurrent-neural-networks-rnn)
+    - [Generative Adversarial Networks (GANs)](#generative-adversarial-networks-gans)
+    - [Variational Autoencoders (VAEs)](#variational-autoencoders-vaes)
+    - [Long Short-Term Memory (LSTM)](#long-short-term-memory-lstm)
+  - [Model Comparisons](#model-comparisons)
+- [Results](#results)
+- [Jupyter Notebooks](#jupyter-notebooks)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-# Project 1 - CIFAR 
+## Introduction
 
-# CIFAR-10 Image Classification
-This project focuses on implementing a neural network for image classification using the CIFAR-10 dataset. The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 different classes, making it a suitable benchmark for testing image classification models.
+Generative AI is at the forefront of technological advancements, and this project is designed to guide you through implementing various generative models from scratch using TensorFlow and Keras. Whether you're a seasoned machine learning engineer or a curious data scientist, you'll find a wealth of information and hands-on examples to enhance your understanding of generative deep learning.
 
-Project Highlights:
-Data Preparation:
+## Features
 
-The CIFAR-10 dataset is loaded and preprocessed.
-Images are normalized to the range [0, 1], and labels are one-hot encoded.
-Model Architecture:
+- Learn the basics of deep learning and progress to cutting-edge generative architectures.
+- Implement variational autoencoders (VAEs), generative adversarial networks (GANs), Transformers, and more.
+- Tips and tricks to make your models learn more efficiently and become more creative.
+- Apply generative models to change facial expressions in photos, generate images, produce new varieties of flowers, train your own GPT for text generation, compose polyphonic music, and solve reinforcement learning tasks.
+- Explore state-of-the-art architectures such as StyleGAN2, ViT-VQGAN, DALL.E 2, Imagen, and Stable Diffusion.
+- Understand the future of generative AI and how to leverage this technology for a competitive advantage.
 
-A simple neural network is defined using the Keras API.
-The model includes flatten and dense layers with ReLU activation functions.
-The output layer uses softmax activation for multiclass classification.
-Training the Model:
+## Getting Started
 
-The model is compiled using the Adam optimizer and categorical cross-entropy loss.
-Training is performed on the training set with a batch size of 32 for 10 epochs.
-Model Evaluation:
+### Prerequisites
 
-The trained model is evaluated on the test set to assess its performance.
-Prediction and Visualization:
+Before you begin, ensure you have met the following requirements:
 
-Random test images are selected to make predictions.
-The actual and predicted classes are displayed along with the corresponding images.
+- [Python](https://www.python.org/) installed.
+- [TensorFlow](https://www.tensorflow.org/) and [Keras](https://keras.io/) installed.
 
-Usage instruction provided in readme of code*
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/yourusername/generative-ai.git
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+To run a specific model or experiment, navigate to the corresponding directory and follow the instructions provided in the README.
+
+## Project Structure
+
+The project structure is organized as follows:
+
+- `data/`: Contains datasets used for training and evaluation.
+- `models/`: Implementation of generative models using TensorFlow and Keras.
+- `results/`: Generated outputs, visualizations, and evaluation metrics.
+- `scripts/`: Helper scripts and utilities.
+- `notebooks/`: Jupyter notebooks for experimenting and exploring models.
+
+## Models
+
+### Model Reviews
+
+#### Convolutional Neural Networks (CNN)
+
+The CNN model is a cornerstone in computer vision applications, effectively capturing spatial hierarchies in data. Review the CNN implementation in the `models/cnn` directory.
+
+#### Recurrent Neural Networks (RNN)
+
+RNNs excel in sequential data processing, making them ideal for natural language processing and time-series analysis. Explore the RNN model in the `models/rnn` directory.
+
+#### Generative Adversarial Networks (GANs)
+
+GANs are powerful for generating realistic synthetic data by training a generator and discriminator simultaneously. Dive into the GAN model in the `models/gans` directory.
+
+#### Variational Autoencoders (VAEs)
+
+VAEs are probabilistic generative models that encode and decode data with a focus on latent space representations. Examine the VAE model in the `models/vae` directory.
+
+#### Long Short-Term Memory (LSTM)
+
+LSTM models are designed to capture long-term dependencies in sequential data, enhancing the capabilities of standard RNNs. Check out the LSTM model in the `models/lstm` directory.
+
+### Model Comparisons
+
+Compare and contrast the reviewed models in terms of architecture, use cases, and performance in the `models/comparisons` directory.
+
+## Results
+
+Check out the `results/` directory for visualizations, generated samples, and evaluation metrics.
+
+## Jupyter Notebooks
+
+Explore the `notebooks/` directory for Jupyter notebooks that accompany the book. These notebooks provide additional insights, explanations, and interactive experiments to deepen your understanding.
+
+## Contributing
+
+Contributions are welcome! Please read the [Contributing Guidelines](CONTRIBUTING.md) for details on how to contribute to this project.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+Special thanks to the authors of the Generative AI book for providing valuable insights and guidance.
+
