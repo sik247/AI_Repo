@@ -12,7 +12,7 @@ Welcome to the Generative AI project repository! This repository accompanies the
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
+
 - [Models](#models)
   - [Model Reviews](#model-reviews)
     - [Convolutional Neural Networks (CNN)](#convolutional-neural-networks-cnn)
@@ -69,15 +69,7 @@ To run a specific model or experiment, navigate to the corresponding directory a
 
 ## Project Structure
 
-The project structure is organized as follows:
 
-- `data/`: Contains datasets used for training and evaluation.
-- `models/`: Implementation of generative models using TensorFlow and Keras.
-- `results/`: Generated outputs, visualizations, and evaluation metrics.
-- `scripts/`: Helper scripts and utilities.
-- `notebooks/`: Jupyter notebooks for experimenting and exploring models.
-
-## Models
 
 ### Model Reviews
 
